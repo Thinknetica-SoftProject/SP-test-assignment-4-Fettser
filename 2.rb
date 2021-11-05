@@ -16,3 +16,21 @@
 #
 ## Решение:
 
+require 'digest'
+
+md5 = Digest::MD5.new
+
+a = gets.chomp
+
+test = false
+i = 1
+while !test
+    if md5.hexdigest("#{a}#{i}")[0..4] == "00000"
+        test = !test
+        break
+    end
+    i += 1
+end
+
+puts i
+

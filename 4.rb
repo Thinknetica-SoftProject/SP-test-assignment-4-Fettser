@@ -16,4 +16,16 @@
 #
 ## Решение:
 
+a = 0
+for i in File.readlines("data/4.txt")
+    b = i.split("x")
+    for j in (0..(b.length - 1))
+        b[j] = b[j].to_i
+    end
+    b.sort!
+    a += 2*(b[0]*b[1] + b[0]*b[2] + b[1]*b[2]) + b[0]*b[1]
+end
+
+puts a
+
 

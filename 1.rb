@@ -16,6 +16,14 @@
 #
 ## Решение:
 
-
-
+a = File.read('data/1.txt').split('')
+b = 0
+for i in a[0..-2]
+    if i == '('
+        b += 1
+    else
+        b -= 1
+    end
+end
+puts b
 

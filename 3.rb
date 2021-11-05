@@ -10,4 +10,14 @@
 #
 ## Решение:
 
+code = 0
 
+for i in File.readlines("data/3.txt")
+    a = i.split(' ')
+    for j in (0..(a.length - 1))
+         a[j] = a[j].to_i
+    end
+    code += a.max - a.min
+end
+
+puts code
